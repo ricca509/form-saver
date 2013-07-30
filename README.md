@@ -7,6 +7,17 @@ Works only with inputs at the moment.
 
 **Using it**
 
+Install bower (http://bower.io/) and install dependencies
+```javascript
+$ npm install -g bower
+```
+From the repository folder
+```javascript
+$ bower install
+```
+
+Then, a possible use case
+
 ```html
 <form id="form">
     <label for="nome">Nome</label>
