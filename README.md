@@ -7,17 +7,19 @@ Works only with inputs at the moment.
 
 **Using it**
 
-Install bower (http://bower.io/) and install dependencies
+Clone the repo
+```
+git clone --depth=1 https://github.com/ricca509/form-saver.git
+```
+Install bower (http://bower.io/) and project dependencies
 ```javascript
 $ npm install -g bower
 ```
-From the repository folder
+Then, from the repository folder
 ```javascript
 $ bower install
 ```
-
-Then, a possible use case
-
+A possible use case
 ```html
 <form id="form">
     <label for="nome">Nome</label>
@@ -41,7 +43,7 @@ saver.onSave(function(data) {
 });
 ```
 
-**Requirements**
+**Dependencies**
  * My PubSub module (https://github.com/ricca509/pubsub)
  * jQuery
 
