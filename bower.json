@@ -10,6 +10,7 @@
     "tests"
   ],
   "dependencies": {
-    "pubsub": "https://github.com/ricca509/pubsub.git"
+    "pubsub": "https://github.com/ricca509/pubsub.git",
+    "jquery": "~2.0.3"
   }
 }
