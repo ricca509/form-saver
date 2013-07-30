@@ -1,0 +1,15 @@
+{
+  "name": "form-saver",
+  "version": "0.0.0",
+  "main": "form-saver.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pubsub": "https://github.com/ricca509/pubsub.git"
+  }
+}

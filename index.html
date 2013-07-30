@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+	<form id="form">
+		<label for="nome">Nome</label>
+		<input type="text" name="nome"></input>
+		<br />
+		<label for="cognome">Cognome</label>
+		<input type="text" name="cognome"></input>
+	</form>
+
+	<script src="bower_components/pubsub/pubsub.js"></script>
+	<script src="form-saver.js"></script>
+	<script>
+	var saver = formSaver("#form");
+	saver.fill();
+	saver.autoSave();
+	saver.onSave(function(data) {
+		console.log("Saved! " + data + " at " + new Date());
+	});
+	</script>
+</body>
+</html>
