@@ -1,20 +1,21 @@
 var formSaver = function(selector) {
-    var events = new PubSub();
-    var name = "form_" + selector;
+    var events = new PubSub(),
+    name = "form_" + selector,
+    $form = $(selector);
 
     var autoSave = function() {
-        $(selector).on("keyup", save);
+        $form.on("keyup", save);
     };
 
     var save = function () {
-        var form = JSON.stringify($(selector).serializeArray());
+        var formData = JSON.stringify($form.serializeArray());
 
         if (!sessionStorage) {
             return;
         }
-        if (sessionStorage[name] !== form) {
-            sessionStorage[name] = form;
-            events.trigger("save", form);
+        if (sessionStorage[name] !== formData) {
+            sessionStorage[name] = formData;
+            events.trigger("save", formData);
         }
     };
 
@@ -22,7 +23,6 @@ var formSaver = function(selector) {
         if (!sessionStorage) {
             return;
         }
-        var $form = $(selector);
         var formData = sessionStorage[name] ? JSON.parse(sessionStorage[name]) : [];
 
         formData.forEach(function(formElem) {
