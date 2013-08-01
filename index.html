@@ -5,11 +5,33 @@
 </head>
 <body>
 	<form id="form">
-		<label for="nome">Nome</label>
-		<input type="text" name="nome"></input>
+		<label for="name">name</label>
+		<input type="text" name="name">
 		<br />
-		<label for="cognome">Cognome</label>
-		<input type="text" name="cognome"></input>
+		<label for="description">description</label>
+		<textarea name="description" rows="3"></textarea>
+		<br />
+		<label>
+			<input type="checkbox" name="check" value="">
+			Option one is this and that&mdash;be sure to include why it's great
+		</label>
+		<br />
+		<label>
+			<input type="radio" name="optionsRadios" value="option1" checked>
+			Option one is this and that&mdash;be sure to include why it's great
+		</label>
+		<label>
+			<input type="radio" name="optionsRadios" value="option2">
+			Option two can be something else and selecting it will deselect option one
+		</label>
+		<br />
+		<select name="select">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select>
 	</form>
 
 	<script src="bower_components/pubsub/pubsub.js"></script>
